@@ -1,0 +1,174 @@
+﻿<Window x:Class="ARM_for_postal_worker.Windows.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARM_for_postal_worker.Windows"
+        mc:Ignorable="d"
+        Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <TabControl FontFamily="Palatino Linotype">
+            <TabItem Header="Выдать посылку/письмо" FontSize="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Информация о получателе или номер отправления" Margin="5,0,40,25" Grid.Column="0" Grid.ColumnSpan="5" />
+                    <TextBox x:Name="FindBox" Grid.Column="0" Grid.ColumnSpan="5" BorderBrush="#4285B4" Margin="5,20,5,0" TextChanged="FindBox_TextChanged"/>
+                    <Border BorderBrush="#4285B4" BorderThickness="1" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="6">
+                        <TextBlock x:Name="Info" Text="" FontSize="15"/>
+                    </Border>
+                    <Button x:Name="button_get_sending" Content="Выдать" Grid.Row="7" Grid.Column="5" FontFamily="Book Antiqua" FontSize="20" Background="#FF86D0FB" BorderBrush="#4285B4" Foreground="Black" Grid.ColumnSpan="3" Margin="55,5,45,5" Click="Button_get_sending_Click"/>
+                    <ScrollViewer Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="5" Margin="5,5,5,5" Grid.Row="1">
+                        <ListView x:Name="GetSendingsList" BorderBrush="#4285B4" SelectionChanged="GetSendingsList_SelectionChanged"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Отправить посылку/письмо" FontSize="15">
+                <TabControl>
+                    <TabItem Header="Кому">
+                        <Grid Height="357" Width="788">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Имя*" Grid.Column="0" Grid.Row="0"/>
+                            <TextBlock Text="Фамилия*" Grid.Column="0" Grid.Row="2"/>
+                            <TextBlock Text="Отчество" Grid.Column="0" Grid.Row="4"/>
+                            <TextBlock Text="Индекс*" Grid.Column="0" Grid.Row="6"/>
+                            <TextBlock Text="Адрес проживания*" Grid.Column="3" Grid.Row="0"/>
+                            <TextBlock Text="Номер телефона*" Grid.Column="3" Grid.Row="2"/>
+                            <TextBlock Text="Почта*" Grid.Column="3" Grid.Row="4"/>
+
+                            <TextBox  x:Name = "ToFirstName" Grid.Row="1"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToLastName" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToPatronymic" Grid.Column="0" Grid.Row="5"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToIndex" Grid.Column="0" Grid.Row="7"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToAddress" Grid.Column="3" Grid.Row="1"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToPhone" Grid.Column="3" Grid.Row="3"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "ToEmail" Grid.Column="3" Grid.Row="5"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="От кого">
+                        <Grid Height="357" Width="788">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Имя*" Grid.Column="0" Grid.Row="0"/>
+                            <TextBlock Text="Фамилия*" Grid.Column="0" Grid.Row="2"/>
+                            <TextBlock Text="Отчество" Grid.Column="0" Grid.Row="4"/>
+                            <TextBlock Text="Индекс*" Grid.Column="0" Grid.Row="6"/>
+                            <TextBlock Text="Адрес проживания*" Grid.Column="3" Grid.Row="0"/>
+                            <TextBlock Text="Номер телефона*" Grid.Column="3" Grid.Row="2"/>
+                            <TextBlock Text="Почта*" Grid.Column="3" Grid.Row="4"/>
+
+                            <TextBox  x:Name = "FromFirstName" Grid.Row="1"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromLastName" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromPatronymic" Grid.Column="0" Grid.Row="5"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromIndex" Grid.Column="0" Grid.Row="7"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromAddress" Grid.Column="3" Grid.Row="1"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromPhone" Grid.Column="3" Grid.Row="3"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                            <TextBox  x:Name = "FromEmail" Grid.Column="3" Grid.Row="5"  Grid.ColumnSpan="2" Margin="0,0,0,10" BorderBrush="#4285B4"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Отправление">
+                        <Grid Height="357" Width="788">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="0.3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Вес письма*" Grid.Column="0" Grid.Row="0"/>
+                            <TextBlock Text="Тип письма*" Grid.Column="0" Grid.Row="2"/>
+                            <ComboBox  x:Name = "TypeBox" Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="2" Margin="0,0,86,10" BorderBrush="#4285B4" Background="White" >
+                                <ComboBoxItem>
+                                    <TextBlock Text="Письмо" />
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Бандероль"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <TextBlock Text="Посылка"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                            <TextBox  x:Name = "Weight" Grid.Row="1" Margin="0,0,43,10" BorderBrush="#4285B4"/>
+
+                            <Button Content="Добавить" Grid.Row="7" BorderBrush="#4285B4" Foreground="Black" Background="#FF86D0FB" x:Name="addLetter" Click="AddLetter_Click" FontSize="18" Grid.ColumnSpan="2" Margin="43,0,129,0"/>
+                            <Button Content="Отправить" Grid.Column="4" Grid.Row="7" BorderBrush="#4285B4" Foreground="Black" Background="#FF86D0FB" x:Name="sendSending" Click="SendSending_Click" FontSize="18" Grid.ColumnSpan="2" Margin="19,0,33,0"/>
+                            <ScrollViewer Grid.Column="3" Grid.RowSpan="7" Grid.ColumnSpan="3" Margin="22,0,15,20" RenderTransformOrigin="0.382,0.506" BorderBrush="#4285B4">
+                                <ListView x:Name="SendingsList" BorderBrush="#4285B4" SelectionChanged="SendingsList_SelectionChanged"/>
+                            </ScrollViewer>
+                            <Button Content="Очистить" BorderBrush="#4285B4" Foreground="Black" Background="PaleVioletRed" x:Name="ClearSending" Click="ClearSending_Click" FontSize="18" Margin="71,0,10,0" Grid.Column="3" Grid.Row="7" RenderTransformOrigin="0.133,0.52"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

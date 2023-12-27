@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<ArrayOfSending xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sending>
+    <Id>615877</Id>
+    <Letters>
+      <Letter>
+        <TypeLetter>Package</TypeLetter>
+        <ToPerson>
+          <FirstName>Артём</FirstName>
+          <LastName>Романович</LastName>
+          <Patronymic>Анатольевич</Patronymic>
+          <Address>Горский 42</Address>
+          <Index>456</Index>
+          <Phone>79999999999</Phone>
+          <Email>artem@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </FromPerson>
+        <Weight>1.5</Weight>
+      </Letter>
+    </Letters>
+    <Status>SortingCenter</Status>
+  </Sending>
+  <Sending>
+    <Id>123456</Id>
+    <Letters>
+      <Letter>
+        <TypeLetter>Package</TypeLetter>
+        <ToPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Олеся</FirstName>
+          <LastName>Бульчук</LastName>
+          <Patronymic>Анатольевна</Patronymic>
+          <Address>Оловозаводская 27/1</Address>
+          <Index>456</Index>
+          <Phone>79999999999</Phone>
+          <Email>bultix81@gmail.com</Email>
+        </FromPerson>
+        <Weight>3</Weight>
+      </Letter>
+    </Letters>
+    <Status>Arrived</Status>
+  </Sending>
+  <Sending>
+    <Id>196318</Id>
+    <Letters>
+      <Letter>
+        <TypeLetter>Parcel</TypeLetter>
+        <ToPerson>
+          <FirstName>Козорез</FirstName>
+          <LastName>Никита</LastName>
+          <Patronymic>Олегович</Patronymic>
+          <Address>Пушкина 13</Address>
+          <Index>324561</Index>
+          <Phone>+79231459872367</Phone>
+          <Email>nikitka@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </FromPerson>
+        <Weight>1</Weight>
+      </Letter>
+      <Letter>
+        <TypeLetter>Letter</TypeLetter>
+        <ToPerson>
+          <FirstName>Козорез</FirstName>
+          <LastName>Никита</LastName>
+          <Patronymic>Олегович</Patronymic>
+          <Address>Пушкина 13</Address>
+          <Index>324561</Index>
+          <Phone>+79231459872367</Phone>
+          <Email>nikitka@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </FromPerson>
+        <Weight>2</Weight>
+      </Letter>
+    </Letters>
+    <Status>OnTheWay</Status>
+  </Sending>
+  <Sending>
+    <Id>852373</Id>
+    <Letters>
+      <Letter>
+        <TypeLetter>Letter</TypeLetter>
+        <ToPerson>
+          <FirstName>Козорез</FirstName>
+          <LastName>Никита</LastName>
+          <Patronymic>Олегович</Patronymic>
+          <Address>Пушкина 13</Address>
+          <Index>324561</Index>
+          <Phone>+79231459872367</Phone>
+          <Email>nikitka@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </FromPerson>
+        <Weight>0.1</Weight>
+      </Letter>
+    </Letters>
+    <Status>SortingCenter</Status>
+  </Sending>
+  <Sending>
+    <Id>872087</Id>
+    <Letters>
+      <Letter>
+        <TypeLetter>Package</TypeLetter>
+        <ToPerson>
+          <FirstName>Данил</FirstName>
+          <LastName>Кузнецов</LastName>
+          <Patronymic>Алексеевич</Patronymic>
+          <Address>Горский 54</Address>
+          <Index>123</Index>
+          <Phone>79231002024</Phone>
+          <Email>danilkuzn2004@gmail.com</Email>
+        </ToPerson>
+        <FromPerson>
+          <FirstName>Егор</FirstName>
+          <LastName>Авдеев</LastName>
+          <Patronymic />
+          <Address>НГТУ 1</Address>
+          <Index>679034</Index>
+          <Phone>71112223344</Phone>
+          <Email>egor@ya.ru</Email>
+        </FromPerson>
+        <Weight>3</Weight>
+      </Letter>
+    </Letters>
+    <Status>SortingCenter</Status>
+  </Sending>
+</ArrayOfSending>
