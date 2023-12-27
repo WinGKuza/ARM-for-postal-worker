@@ -31,5 +31,11 @@ namespace ARM_for_postal_worker.Classes
             string[] stat = { "В сортировочном центре", "В пути", "Прибыло" };
             return stat[(int)Status];
         }
+        public override bool Equals(object obj)
+        {
+            Sending send = (Sending)obj;
+            if (send.Id == Id) { return true; }
+            return false;
+        }
     }
 }

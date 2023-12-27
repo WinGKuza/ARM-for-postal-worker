@@ -22,6 +22,8 @@ namespace ARM_for_postal_worker.Windows
     /// </summary>
     public partial class Main : Window
     {
+        uint code = 0;
+        Sending selected = null;
         public Main()
         {
             InitializeComponent();
@@ -118,7 +120,7 @@ namespace ARM_for_postal_worker.Windows
         private void GetSendingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Sending sending = (Sending)GetSendingsList.SelectedItem;
-            if (sending != null)
+            if (sending != null && code == 0)
             {
                 Info.Text = "Отправление №" + Convert.ToString(sending.Id) + "\nКому: " + sending.Letters[0].ToPerson.LastName + " " + sending.Letters[0].ToPerson.FirstName + "\n" + sending.Letters[0].ToPerson.Patronymic + "\nОт кого: " + sending.Letters[0].FromPerson.LastName + " " + sending.Letters[0].FromPerson.FirstName + "\n" + sending.Letters[0].FromPerson.Patronymic + "\nКоличество: " + Convert.ToString(sending.Letters.Count) + "\nСтатус: ";
                 SolidColorBrush color = Brushes.Black;
@@ -130,16 +132,15 @@ namespace ARM_for_postal_worker.Windows
                 }
                 Info.Inlines.Add(new Run(sending.StatusToStr()) { Foreground = color });
             }
-        }
-
+        }        
         private void Button_get_sending_Click(object sender, RoutedEventArgs e)
         {
             if (GetSendingsList.SelectedItem != null)
             {
                 if (((Sending)GetSendingsList.SelectedItem).Status == Status.Arrived)
                 {
-                    GiveSending gs = new GiveSending(Gmail.SendSecureCode(((Sending)GetSendingsList.SelectedItem).Letters[0].ToPerson));
-                    gs.ShowDialog();
+                    code = Gmail.SendSecureCode(((Sending)GetSendingsList.SelectedItem).Letters[0].ToPerson);
+                    selected = (Sending)GetSendingsList.SelectedItem;
                 }
                 else
                 {
@@ -147,6 +148,29 @@ namespace ARM_for_postal_worker.Windows
                     return;
                 }
             }
+        }
+
+        private void Button_Ok_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (selected != null && code == Convert.ToUInt32(CodeBox.Text))
+                {
+                    List<Sending> sendings = SaveLoadSendings.DeserializeSendings();
+                    
+                    sendings.Remove(selected);
+                    GetSendingsList.ItemsSource = sendings;
+                    SaveLoadSendings.SerializeSendings(sendings);
+                    UpdateGetSendingsList();
+                    code = 0;
+                    MessageBox.Show("Посылка выдана!");
+                }
+                else
+                {
+                    MessageBox.Show("Неверный код!");
+                }
+            }
+            catch { MessageBox.Show("Неверно введён код!"); }
         }
     }
 }

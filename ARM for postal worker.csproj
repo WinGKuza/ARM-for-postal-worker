@@ -82,9 +82,6 @@
     <Compile Include="Classes\Sending.cs" />
     <Compile Include="Classes\SendTo.cs" />
     <Compile Include="Classes\Gmail.cs" />
-    <Compile Include="Windows\GiveSending.xaml.cs">
-      <DependentUpon>GiveSending.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -100,10 +97,6 @@
     <Compile Include="Windows\ViewLetter.xaml.cs">
       <DependentUpon>ViewLetter.xaml</DependentUpon>
     </Compile>
-    <Page Include="Windows\GiveSending.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

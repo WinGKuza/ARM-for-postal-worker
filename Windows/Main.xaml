@@ -32,13 +32,15 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Информация о получателе или номер отправления" Margin="5,0,40,25" Grid.Column="0" Grid.ColumnSpan="5" />
                     <TextBox x:Name="FindBox" Grid.Column="0" Grid.ColumnSpan="5" BorderBrush="#4285B4" Margin="5,20,5,0" TextChanged="FindBox_TextChanged"/>
-                    <Border BorderBrush="#4285B4" BorderThickness="1" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="6">
+                    <Border BorderBrush="#4285B4" BorderThickness="1" Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="5" Margin="0,-30,0,0">
                         <TextBlock x:Name="Info" Text="" FontSize="15"/>
                     </Border>
-                    <Button x:Name="button_get_sending" Content="Выдать" Grid.Row="7" Grid.Column="5" FontFamily="Book Antiqua" FontSize="20" Background="#FF86D0FB" BorderBrush="#4285B4" Foreground="Black" Grid.ColumnSpan="3" Margin="55,5,45,5" Click="Button_get_sending_Click"/>
+                    <Button x:Name="button_get_sending" Content="Выдать" Grid.Row="6" Grid.Column="5" FontSize="20" Background="#FF86D0FB" BorderBrush="#4285B4" Foreground="Black" Grid.ColumnSpan="3" Margin="55,5,45,5" Click="Button_get_sending_Click"/>
                     <ScrollViewer Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="5" Margin="5,5,5,5" Grid.Row="1">
                         <ListView x:Name="GetSendingsList" BorderBrush="#4285B4" SelectionChanged="GetSendingsList_SelectionChanged"/>
                     </ScrollViewer>
+                    <TextBox x:Name="CodeBox" Grid.Column="4" Grid.Row="7" BorderBrush="#4285B4" Grid.ColumnSpan="4" Margin="99,4,99,6"/>
+                    <Button x:Name="Button_Ok" Content="Ок" Grid.Column="7" Grid.Row="7" Margin="5,4,5,6" FontSize="20" Background="#FF86D0FB" BorderBrush="#4285B4" Foreground="Black" Click="Button_Ok_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Отправить посылку/письмо" FontSize="15">

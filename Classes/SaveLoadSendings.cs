@@ -26,7 +26,7 @@ namespace ARM_for_postal_worker.Classes
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Sending>));
             const string path = @"..\..\Data\Sendings.xml";
-            using (FileStream writer = new FileStream(path, FileMode.OpenOrCreate))
+            using (FileStream writer = new FileStream(path, FileMode.Create))
             {
                 xmlSerializer.Serialize(writer, sendings);
             }
