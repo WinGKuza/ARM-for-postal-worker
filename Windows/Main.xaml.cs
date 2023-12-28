@@ -120,7 +120,7 @@ namespace ARM_for_postal_worker.Windows
         private void GetSendingsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Sending sending = (Sending)GetSendingsList.SelectedItem;
-            if (sending != null && code == 0)
+            if (sending != null)
             {
                 Info.Text = "Отправление №" + Convert.ToString(sending.Id) + "\nКому: " + sending.Letters[0].ToPerson.LastName + " " + sending.Letters[0].ToPerson.FirstName + "\n" + sending.Letters[0].ToPerson.Patronymic + "\nОт кого: " + sending.Letters[0].FromPerson.LastName + " " + sending.Letters[0].FromPerson.FirstName + "\n" + sending.Letters[0].FromPerson.Patronymic + "\nКоличество: " + Convert.ToString(sending.Letters.Count) + "\nСтатус: ";
                 SolidColorBrush color = Brushes.Black;

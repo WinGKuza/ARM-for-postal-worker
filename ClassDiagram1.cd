@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ARM_for_postal_worker.Classes.Account">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Classes\Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.CheckToPerson">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\CheckToPerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.DataValid">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Classes\DataValid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.ForLogin">
+    <Position X="14" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Classes\ForLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.Gmail">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Gmail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.Hash">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Hash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.Letter">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAEACAAAAAEACQAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Letter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.Person">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAGAAACBAAAAgAAAAAAAAAAAAAAAiAAEAKAABAAg=</HashCode>
+      <FileName>Classes\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.SaveLoadAccount">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SaveLoadAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.SaveLoadSendings">
+    <Position X="1.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAA=</HashCode>
+      <FileName>Classes\SaveLoadSendings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.Sending">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAACEgAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Sending.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARM_for_postal_worker.Classes.SendTo">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SendTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ARM_for_postal_worker.Classes.TypeLetter">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Letter.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ARM_for_postal_worker.Classes.Status">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACA=</HashCode>
+      <FileName>Classes\Sending.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

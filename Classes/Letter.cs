@@ -26,7 +26,7 @@ namespace ARM_for_postal_worker.Classes
         public Letter() { }
         public override string ToString()
         {
-            return TypeToStr()+" ("+FromPerson.LastName+"->"+ToPerson.LastName+" Вес: "+Weight.ToString()+" г.)";
+            return TypeToStr()+" ("+FromPerson.LastName+"->"+ToPerson.LastName+" Вес: "+Weight.ToString()+" кг.)";
         }
         public string TypeToStr()
         {

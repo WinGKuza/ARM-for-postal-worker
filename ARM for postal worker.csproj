@@ -93,7 +93,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Account.cs" />
-    <Compile Include="Classes\Helper.cs" />
     <Compile Include="Windows\ViewLetter.xaml.cs">
       <DependentUpon>ViewLetter.xaml</DependentUpon>
     </Compile>
@@ -128,6 +127,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
